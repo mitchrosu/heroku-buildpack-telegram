@@ -21,7 +21,7 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
- git clone --recursive https://github.com/vysheng/tg.git
+git clone --recursive https://github.com/vysheng/tg.git
 
 echo "Build telegram-cli" | indent
 cd tg
@@ -34,5 +34,5 @@ echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/telegram-cli.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo ''
-echo 'export PATH="$PATH:$HOME/vendor/tg-1.0.5.1/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/tg-1.0.5.1/bin"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:$HOME/vendor/tg/bin"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/tg/bin"' >> $PROFILE_PATH
